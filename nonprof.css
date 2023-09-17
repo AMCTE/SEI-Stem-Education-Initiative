@@ -1,0 +1,548 @@
+@font-face{
+    font-family: 'Science';
+    src:url(Lato-Bold.ttf);
+}
+
+@font-face{
+    font-family: 'opening';
+    src:url(moon_get-Heavy.ttf);
+}
+
+.npbody{
+    margin: 0px !important;
+    background-color: #000000;
+    color: #ffffff;
+    min-height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    font-family: 'Science', 'sans-serif' !important;
+}
+
+.header{
+    background-color: #000000;
+    display:flex;
+    align-items: baseline;
+    justify-content: center;
+    padding: 1.5rem;
+    gap: 1rem;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 9999;
+}
+
+.mydropdown-heading{
+    text-align: center;
+    color: white;
+}
+
+.minibuttons{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: .4rem;
+    padding-bottom: .4rem;
+    border: none;
+    margin: 0.5rem;
+    background-color: transparent;
+    border-radius: 10px;
+    border-image: linear-gradient(217deg, #79edff, #ff000000 70.71% ), linear-gradient(127deg, #003fe0, #00ff0000 70.71%), 
+    linear-gradient(336deg, #8f37c9, #0000ff00 70.71%);
+    transition-duration: 0.4s;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.minibuttons:hover{
+    background-color: #ffffff41;
+    transform: scale(1.1); 
+}
+
+.link{
+    color: #afafaf;
+    text-decoration: none;
+    font-family: 'Science', sans-serif;
+    font-size: inherit;
+    padding: 0 10px;
+    margin-left: 20px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    transition-duration: 0.4s;
+}
+
+.mydropdown.active > .link,
+.link:hover{
+    color: rgb(255, 255, 255);
+    transform: scale(1.2); 
+}
+
+.mydropdown{
+    position: relative;
+}
+
+.mydropdown-menu{
+    position: absolute;
+    left: 0;
+    top: calc(100% + .25rem);
+    background-image: linear-gradient(to bottom right, rgb(0, 0, 101), rgb(0, 0, 101), rgb(0, 0, 59));
+    padding: 1rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .1);
+    display:none;
+    transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+    transform: translateY(-10px);
+}
+
+
+.mydropdown.active > .link + .mydropdown-menu{
+    display: block;
+    transform: translateY(0);
+}
+
+.information1-grid{
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    gap: 2rem;
+}
+
+.mydropdown-links{
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+}
+
+.logoname{
+    background-image: linear-gradient(217deg, #5a54ff, #ff000000 70.71% ), linear-gradient(127deg, #de4bff, #00ff0000 70.71%), 
+    linear-gradient(336deg, #0f1896, #0000ff00 70.71%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 10px;
+    margin-left: 6%;
+}
+
+/* Nav bar stuff is up top next is all the accessories*/
+
+.openingtext{
+    font-size: 80px;
+}
+
+.beginwelcome{
+    color: rgb(255, 255, 255);
+    margin-top: 40%;
+    text-align: center;
+}
+
+.beginp{
+    margin-left: 6%;
+    font-size: 20px;
+}
+
+.welcome{
+    color: rgb(255, 255, 255);
+    margin-top: 15%;
+    text-align: center;
+    font-size: 40px;
+}
+
+
+.subwelcome{
+    color: rgb(165, 165, 165);
+    font-size: 30px;
+    margin-left: 15%;
+}
+
+/*This is the code for the buttons to enlist in the nonprofit*/
+.infobuttons{
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: .8rem;
+    padding-bottom: .8rem;
+    background-color: transparent;
+    border-radius: 10px;
+    border: 3px solid white;
+    transition-duration: 0.4s;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.infobuttons:hover{
+    background-color: #ffffff74;
+}
+
+.LogoControl{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 10px;
+    margin-left: 3%;
+}
+
+.VolunteerModule{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 5rem;
+    margin-top: 20px;
+    height: 21rem;
+    background-image:linear-gradient(217deg, #2569c3, #0b0b6600 70.71% ), linear-gradient(127deg, #0d2e81, #00ff0000 70.71%), 
+    linear-gradient(336deg, #120d9d, #0000ff00 70.71%);
+    border-radius: 20px;
+    box-shadow: 10px 10px 40px 20px #1c30c91c;
+    transition: 0.4s;
+}
+
+.Volunteerspan{
+    width: 20%;
+}
+
+.Volunteerspan1{
+    width: 80%;
+    rotate: 40deg;
+}
+
+.VolunteerModule:hover{
+    transform: translateY(-10px);
+}
+
+.EVENTModule{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 5rem;
+    margin-top: 20px;
+    height: 21rem;
+    background-image:linear-gradient(217deg, #2569c3, #0b0b6600 70.71% ), linear-gradient(127deg, #0d2e81, #00ff0000 70.71%), 
+    linear-gradient(336deg, #120d9d, #0000ff00 70.71%);
+    border-radius: 20px;
+    box-shadow: 10px 10px 40px 20px #1c30c91c;
+    transition: 0.4s;
+}
+
+.eventspan{
+    width: 40%;
+}
+
+.eventspan1{
+    width: 60%;
+    margin-bottom: 30px;
+}
+
+.EVENTModule:hover{
+    transform: translateY(-10px);
+}
+
+.missionheading{
+    display: flex;
+    margin-top: 20px;
+    height: 21rem;
+    background-image:linear-gradient(217deg, #2569c3, #0b0b6600 70.71% ), linear-gradient(127deg, #0d2e81, #00ff0000 70.71%), 
+    linear-gradient(336deg, #120d9d, #0000ff00 70.71%);
+    border-radius: 20px;
+    font-size: "sans-serif";
+    box-shadow: 10px 10px 40px 20px #1c30c91c;
+    transition: 0.4s;
+}
+
+.missionheading:hover{
+    transform: translateY(-10px);
+}
+
+.missionheader{
+    margin-top: 10%;
+    margin-left: 20%;
+}
+
+.ourmission{
+    color: #ffffff;
+    margin-left: 20%;
+    margin-top: 20px;
+}
+
+.chaptermission{
+    width: 50%;
+}
+
+.chaptermission1{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-bottom: 10%;
+}
+
+
+.StartChapterModule{
+    display: flex;
+    margin-top: 20px;
+    background-image:linear-gradient(217deg, #2569c3, #0b0b6600 70.71% ), linear-gradient(127deg, #0d2e81, #00ff0000 70.71%), 
+    linear-gradient(336deg, #120d9d, #0000ff00 70.71%);
+    border-radius: 20px;
+    box-shadow: 10px 10px 40px 20px #1c30c91c;
+    transition: 0.4s;
+    cursor: pointer;
+    min-height: 200px;
+    align-items: baseline;
+}
+
+.chapterSpan{
+    width: 30%;
+}
+
+.chapterSpan1 {
+    width: 40%;
+    padding-left: 8rem;
+}
+.chapterSpan2 {
+    width: 30%;
+}
+
+.startimg{
+    margin-top: 15%;
+}
+
+.scm {
+    display: flex;
+    justify-content: space-around;
+}
+
+.StartChapterModule:hover{
+    transform: translateY(-10px);
+}
+
+.iconstyle{
+    margin-right: 10px;
+}
+
+.faqcontrol{
+    margin-top: 2%;
+}
+
+.roll-animation{
+    animation-name: infiniterollaround; 
+   animation-duration: 15s;
+   animation-iteration-count: infinite;
+   animation-timing-function: ease;
+   transition: all .3s;
+}
+
+@keyframes infiniterollaround{
+    0%{
+        transform: rotate(0deg);
+    }
+
+    50%{
+        transform: rotate(180deg);
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.updown-animation{
+    animation-name: infiniteupdown; 
+   animation-duration: 3s;
+   animation-iteration-count: infinite;
+   animation-timing-function: ease;
+   transition: all .3s;
+}
+
+@keyframes infiniteupdown {
+    0%{
+        transform: translateY(0px);  
+    }
+
+    50%{
+        transform: translateY(-10px); 
+    }
+
+    100%{
+        transform: translateY(0px); 
+    }
+}
+
+
+.accordion {
+    --bs-accordion-color: #ffffff !important;
+    --bs-accordion-bg: #fff0 !important;
+    --bs-accordion-btn-color: #ffffff !important;
+    --bs-accordion-active-color: #ffffff !important;
+    --bs-accordion-active-bg: #ffffff00 !important;
+}
+
+footer{
+    width: 100%;
+    background-image: linear-gradient(to right, #00093c, #2d0b00);
+    color: #fff;
+    padding: 100px 0 30px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    font-size: 13px;
+    line-height: 20px;
+}
+
+.footerrow{
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-left: 20%;
+}
+
+.footercol{
+    flex-basis: 25%;
+    padding: 10px;
+}
+
+.footerlogo{
+    width: 65px;
+    margin-bottom: 30px;
+}
+
+.footercol h3{
+    width: fit-content;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.email-id{
+    width: fit-content;
+    border-bottom: 1px solid #ccc;
+    margin: 20px 0;
+}
+
+ul li{
+    list-style: none;
+    margin-bottom: 12px;
+}
+
+ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+.donateclass{
+    margin-left: 26%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    text-decoration: none;
+    gap: 5px;
+    padding: 15px;
+    background-color: #0396ff;
+    border-radius: 20px;
+    transition: 0.4s;
+    margin-top: 5%;
+    font-size: 20px;
+    max-width: 120px;
+}
+
+.donateclass:hover{
+    transform: scale(1.08);
+    background-color: #007ad1;
+}
+
+
+
+/*section{
+    display: grid;
+    place-items: center;
+    align-items: center;
+    min-height: 60vh;
+    font-size: 40px;
+    padding: 0;
+    margin: 0;
+}
+
+.hidden{
+    opacity: 0;
+    transition: all 4s;
+    margin-top: 60%;
+    font-family: 'Science', sans-serif;
+}
+
+.show{
+    opacity: 1;
+}
+*/
+/*<section class="hidden">
+        <h3>Our Mission</h3>
+        <p>To enrich members of the club with specialized content about biology, chemistry, and physics</p>
+    </section>*/
+    
+
+/*<div class="dropdown" data-dropdown>
+            <button class="link" data-dropdown-button>Resources</button>
+            <div class="dropdown-menu information-grid">
+                <div class="dropdown-heading">Biology</div>
+                <div class="dropdown-links">
+                    <a href="#" class="minibuttons">earth</a>
+                    <a href="#" class="minibuttons">earth</a>
+                    <a href="#" class="minibuttons">earth</a>
+                </div>
+                <div class="dropdown-heading">Chemistry</div>
+                <div class="dropdown-links">
+                    <a href="#" class="minibuttons">earth</a>
+                    <a href="#" class="minibuttons">earth</a>
+                    <a href="#" class="minibuttons">earth</a>
+                </div>
+                <div class="dropdown-heading">Physics</div>
+                <div class="dropdown-links">
+                    <a href="#" class="minibuttons">earth</a>
+                    <a href="#" class="minibuttons">earth</a>
+                    <a href="#" class="minibuttons">earth</a>
+                </div>
+                <div class="dropdown-heading">Other</div>
+                <div class="dropdown-links">
+                    <a href="#" class="minibuttons">earth</a>
+                    <a href="#" class="minibuttons">earth</a>
+                    <a href="#" class="minibuttons">earth</a>
+                </div>
+            </div>
+        </div>*/
+
+
+/*
+<div class="row">
+        <div class="col-2"></div>
+        <div class="col-8">
+          <h1 class="welcome">SOURCE</h1>
+          <p class="subwelcome">The only place you need for all things STEM.</p>
+          <div class="VolunteerModule">
+            <a href="#" class="infobuttons">Volunteer</a>
+          </div>
+          <div class="row">
+            <div class="col-7">
+              <div class="StartChapterModule">
+                <a href="#" class="infobuttons">Start Your Own Chapter</a>
+              </div>
+            </div>
+            <div class="col-5">
+              <div class="EVENTModule">
+                <a href="#" class="infobuttons">Events</a>
+              </div>
+            </div>
+          </div>
+          <div class="missionheading">
+            <h1>Our Mission</h1>
+        <p class="ourmission">The mission of STEM4ALL is to give underpriveleged <br> people a chance
+        to learn about STEM.Through our high quality resources<br> ranging from physics to computer science, we aim to 
+        provide each individual<br> a chance to learn about STEM.
+        </p>
+          </div>
+        </div>
+        <div class="col-2"></div>
+      </div>*/
